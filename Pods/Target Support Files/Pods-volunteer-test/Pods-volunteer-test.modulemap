@@ -1,0 +1,6 @@
+framework module Pods_volunteer_test {
+  umbrella header "Pods-volunteer-test-umbrella.h"
+
+  export *
+  module * { export * }
+}

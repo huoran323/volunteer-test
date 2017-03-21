@@ -1,0 +1,52 @@
+//
+//  PrefixHeader.pch
+//  volunteer-test
+//
+//  Created by apple on 2017/3/21.
+//  Copyright © 2017年 apple. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+/*常用颜色*/
+#define kNaviColor UIColorFromRGB(0xff5000)
+
+/*颜色宏*/
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+/*常量*/
+#define ScreenW [[UIScreen mainScreen]bounds].size.width
+#define ScreenH [[UIScreen mainScreen]bounds].size.height
+#define ScreenFrame [[UIScreen mainScreen]bounds]
+
+/*GCD*/
+#define mainThread(block) dispatch_async(dispatch_get_main_queue(), ^{block});
+
+#define BACKFRAME CGRectMake(0, 0, 11, 20)
+
+/*URL*/
+//本地
+//#define FIRST_URL @""
+//正式版
+//#define FIRST_URL @""
+//测试版
+#define FIRST_URL @"http://192.168.1.133:9999/zyz/phone/"
+
+//商城首页
+#define SHOP_HOME1_URL @"shop/categorys/getCategorys.do"
+#define SHOP_HOME2_URL @"shop/index/getRecomment.do"
+
+/*头文件*/
+#import "AFNetworking.h"
+#import "SDWebImage-umbrella.h"
+#import "MJRefresh.h"
+#import "YYModel.h"
+#import "CustomObject.h"
+#import "NetTool.h"
+#import "Requester.h"
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* PrefixHeader_pch */
